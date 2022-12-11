@@ -1,4 +1,7 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
+import 'package:vt_utils/vt_utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
+      LogUtil.getInstance().log("init");
+      SpUtil.putBool('key', true);
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
